@@ -141,6 +141,51 @@ h3 {
 	background-color: #028F76;
 }
 
+#start:active {
+	background-color: #028F76;
+}
+
+/*popup message when user has submited their answer - correct or incorrect*/
+
+.answerPopUp {
+	background-color: white;
+	width: 70%;
+	float: center;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	z-index: 5;
+	color: #DA695D;
+	display: none;
+	top: -400px;
+	height: 200px;
+	border-radius: 15px;
+	text-align: center;
+	padding: 100px;
+	opacity: .95;
+}
+
+.continue {
+	background-color: #445155;
+	font-size: 18px;
+	text-transform: uppercase;
+	color: white;
+	text-align: center;
+	padding: 15px 50px 15px 45px;
+	border-radius: 30px;
+	float: center;
+	margin-left: 0px;
+	border: none;
+	width: 200px;
+}
+
+#correct {
+	display: none;
+}
+
+#incorrect {
+	display: none;
+}
 /*progress section on right - hidden @ start and end */
 
 #progress {
@@ -162,9 +207,9 @@ h3 {
 	display: block;
 	width: 70px;
 	height: 70px;
-	background-color: #DA695D;
-	/*background-color: #445155;
-	background-color: #028F76;*/
+	/*background-color: #DA695D;*/
+	background-color: #445155;
+	/*background-color: #028F76;*/
 	-moz-border-radius: 35px;
 	-webkit-border-radius: 35px;
 	border-radius: 35px;
@@ -175,6 +220,18 @@ h3 {
 	opacity: 1;
 	margin-right: 10px;
 
+}
+
+.currentQuestion {
+	background-color: #DA695D;
+}
+
+.rightAnswer {
+	background-color: #028F76;
+}
+
+.wrongAnswer {
+	background-color: #DA4747;
 }
 
 .progressLight img {
@@ -200,12 +257,14 @@ h3 {
 /*Section where user clicks on the answer to each question*/
 
 .answers {
-	float: center;
-	width: 55%;
+	float: left;
+	width: 75%;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 25px;
 	display: none;
+	padding-left: 100px;
+	min-width: 600px;
 }
 
 .answer {
@@ -218,7 +277,7 @@ h3 {
 	border-radius: 60px;
 	color: white;
 	text-align: center;
-	margin: 20px;
+	margin: 15px;
 	text-align: baseline;
 }
 
@@ -245,14 +304,35 @@ h3 {
 	/*margin-left: 20px;*/
 }
 
-#submit {
-	display: inline-block;
-	position: relative;
-	margin-top: -25px;
+.selectedAnswer {
+	background-color: #445155;
 }
 
-#arrow img {
+#submitButton{
+	display: inline-block;
+	width: 120px;
+	height: 120px;
+	background: #028F76;
+	-moz-border-radius: 60px;
+	-webkit-border-radius: 60px;
+	border-radius: 60px;
+	color: white;
+	text-align: center;
+	margin: -400px 0px 0px 780px;
+	top: -30px;
+	text-align: baseline;
+	position: relative;
+	/*min-width: 900px;*/
+	display: none;
+}
+
+#submitButton:hover{
+	background-color: #445155;
+}
+
+#arrow {
 	width: 50px;
 	position: absolute;
-	margin-top: -25px;
+	padding-top: 35px;
+	margin-left: -20px;
 }

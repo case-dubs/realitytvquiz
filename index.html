@@ -2,7 +2,6 @@
 <HTML>
 	<head>
 		<script src="./jquery-1.10.2.js"></script> 
-		<script src="application.js"></script> 
 		<link rel="stylesheet" type="text/css" href="main.css">
 		<title>Are You A Reality Pro?</title>
 	</head>
@@ -27,21 +26,31 @@
 				<h3 id="intro">How much do you know about reality TV? Take the quiz & find out</h3>
 				<input type="submit" value="Get Started" id="start">
 			</div>
+			<div class="answerPopUp" id="correct">	
+				<h1>Correct!</h1>
+				<h2>You got it right!</h2>
+				<input type="submit" value="Continue" class="continue">
+			</div>
+			<div class="answerPopUp" id="incorrect">
+				<h1>Sorry</h1>
+				<h2>Wrong Answer</h2>
+				<input type="submit" value="Continue" id="continue">
+			</div>
 		</div>
 		<div id="progress">
-			<div class="progressLight">
+			<div class="progressLight" id="progressLamp1">
 				<img  src="./images/q1.png">
 			</div>
-			<div class="progressLight">
+			<div class="progressLight" id="progressLamp2">
 				<img  src="./images/q2.png">
 			</div>
-			<div class="progressLight">
+			<div class="progressLight" id="progressLamp3">
 				<img  src="./images/q3.png">
 			</div>
-			<div class="progressLight">
+			<div class="progressLight" id="progressLamp4">
 				<img  src="./images/q4.png">
 			</div>
-			<div class="progressLight">
+			<div class="progressLight" id="progressLamp5">
 				<img  src="./images/q5.png">
 			</div>
 			<div id="progressMeter"><span>% </span><span>Progress</span></div>
@@ -62,11 +71,6 @@
 					<h3>Boston</h3>
 				</a>
 			</div>
-			<div class="answer" id="submit">
-				<!---<a href="#">-->
-					<img id="arrow" src="./images/arrows.png">
-				<!---</a>-->
-			</div>
 		</div>
 		<div class="answers" id="q2">
 			<div class="answer">
@@ -83,11 +87,6 @@
 				<a href="#">
 					<h3>Beverly Hills</h3>
 				</a>
-			</div>
-			<div class="answer" id="submit">
-				<!---<a href="#">-->
-					<img id="arrow" src="./images/arrows.png">
-				<!---</a>-->
 			</div>
 		</div>
 		<div class="answers" id="q3">
@@ -106,11 +105,6 @@
 					<h3>10</h3>
 				</a>
 			</div>
-			<div class="answer" id="submit">
-				<!---<a href="#">-->
-					<img id="arrow" src="./images/arrows.png">
-				<!---</a>-->
-			</div>
 		</div>
 		<div class="answers" id="q4">
 			<div class="answer">
@@ -127,11 +121,6 @@
 				<a href="#">
 					<h3>Blue</h3>
 				</a>
-			</div>
-			<div class="answer" id="submit">
-				<!---<a href="#">-->
-					<img id="arrow" src="./images/arrows.png">
-				<!---</a>-->
 			</div>
 		</div>
 		<div class="answers" id="q5">
@@ -150,10 +139,12 @@
 					<h3>Rebecca</h3>
 				</a>
 			</div>
-			<div class="answer" id="submit">
-				<!---<a href="#">-->
-					<img id="arrow" src="./images/arrows.png">
-				<!---</a>-->
-			</div>
+		</div>
+		<div id="submitButton">
+			<!---<a href="#">-->
+			<img id="arrow" src="./images/arrows.png">
+			<!---</a>-->
 		</div>
 	</body>
+	<script src="application.js"></script>
+</HTML>
