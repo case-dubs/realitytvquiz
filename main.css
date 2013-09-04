@@ -1,3 +1,5 @@
+/*global settings*/
+
 body {
 	background-color: #15262A;
 	font-family: Arial;
@@ -14,6 +16,8 @@ h3 {
 	text-transform: uppercase;
 }
 
+/*Header*/
+
 #logo {
 	/*left: 25px;*/
 	position: absolute;
@@ -26,7 +30,7 @@ h3 {
 	position: relative;
 }
 
-/*progress section on right - hidden @ start and end */
+/*This top question area is hidden @ start and end. It only appears when someone has pressed the Start button and is asking questions*/
 
 #topQuestion {
 	width: 60%;
@@ -40,7 +44,7 @@ h3 {
 	float: center;
 	height: 100px;
 	opacity: 0;
-	display: none;
+	/*display: none;*/
 }
 
 #topQuestion h1 {
@@ -52,6 +56,8 @@ h3 {
 	position: relative;
 	display: none;
 }
+
+/*Feature area including TV*/
 
 #centerArea {
 	width: 40%;
@@ -70,7 +76,7 @@ h3 {
 	/*margin-left: 50px;*/
 	margin-top: 0px;
 	z-index: 1;
-	margin-left: 110px;
+	margin-left: 135px;
 }
 
 #banner {
@@ -80,7 +86,7 @@ h3 {
 	color: #DA695D;*/
 	color: white;
 	margin-top: -185px;
-	margin-left: 130px;
+	margin-left: 155px;
 	z-index: 2;
 	text-align: center;
 	position: absolute;
@@ -88,6 +94,7 @@ h3 {
 	width: 180px;
 	border-radius: 10px;
 	color: #028F76;
+	display: none;
 	/*opacity: .75;*/
 }
 
@@ -95,11 +102,14 @@ h3 {
 	font-size: 24px;
 }
 
-#start {
+/*only appears on home view*/
+
+#getStarted {
 	position: relative;
 	float: center;
 	width: 95%;
 	margin: 20px 0px 20px 25px;
+	min-width: 500px;
 }
 
 #intro{
@@ -113,22 +123,21 @@ h3 {
 	font-weight: thin;
 }
 
-#button {
+#start {
 	background-color: #445155;
 	font-size: 18px;
 	text-transform: uppercase;
 	color: white;
 	text-align: center;
-	padding: 10px 50px;
-	border-radius: 20px;
-	width: 20%;
+	padding: 15px 50px 15px 45px;
+	border-radius: 30px;
 	float: center;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 20px;
+	margin-left: 145px;
+	border: none;
+	width: 200px;
 }
 
-#button:hover {
+#start:hover {
 	background-color: #028F76;
 }
 
@@ -146,6 +155,8 @@ h3 {
 	margin-top: -500px;
 	display: none;
 }
+
+/*background should be grey when not started, orange when it's currently being done and green when completed*/
 
 .progressLight {
 	display: block;
@@ -185,6 +196,8 @@ h3 {
 	background-color: #028F76;
 	color: white;
 }
+
+/*Section where user clicks on the answer to each question*/
 
 .answers {
 	float: center;
