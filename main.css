@@ -222,6 +222,10 @@ h3 {
 
 }
 
+.unAnswered {
+	background-color:#445155; 
+}
+
 .currentQuestion {
 	background-color: #DA695D;
 }
@@ -231,7 +235,7 @@ h3 {
 }
 
 .wrongAnswer {
-	background-color: #DA4747;
+	background-color: red;
 }
 
 .progressLight img {
@@ -318,8 +322,7 @@ h3 {
 	border-radius: 60px;
 	color: white;
 	text-align: center;
-	margin: -400px 0px 0px 780px;
-	top: -30px;
+	margin: 50px 0px 0px 780px;
 	text-align: baseline;
 	position: relative;
 	/*min-width: 900px;*/
@@ -332,7 +335,8 @@ h3 {
 
 #arrow {
 	width: 50px;
-	position: absolute;
-	padding-top: 35px;
-	margin-left: -20px;
+	position: relative;
+	display: inline-block;
+	padding-top: -210px;
+	margin-left: -315px;
 }
