@@ -1,8 +1,14 @@
+//Next step 1: build out checkAnswer funciton so that it produces correct/incorrect for each question, adds the wrongAnswer/rightAnswer class, and updates the progress bar. UNSTUCK POINT 2: Now that I've set up multiple answers, how do I make this $("submitButton") function work? I think what I do is continue adding to the if statements below
+//Next Step 2: build out the continue.click function so that it serves up the next answer depending on the length of .unAnswered 
+//Next step 3: get the progress bar / % functioning
+//Next step 4: get the "You're done" page set up
+//Next step 5: clean up the css
+
 console.log("page loads.");
 
 /*Banner in TV fades in*/
 
-$('#banner').fadeIn('100');
+$('#introBanner').delay(500).fadeIn(1000);
 
 /*Banner and getStarted sections fade away when "Get Started" button is clicked. first question, q1 answers and progress bar (right) fade in*/
 
@@ -11,7 +17,7 @@ $('#start').on('click', function(){
 	 // var getStarted = $('#getStarted');
 	  //var banner = $('#banner');
 	  $('#getStarted').hide();
-	  $('#banner').hide();
+	  $('#introBanner').hide();
 	  $('#topQuestion').css({'opacity': '1'});
 	  $("#topQuestion").show();
 	  $("#firstQuestion").show();
@@ -20,6 +26,7 @@ $('#start').on('click', function(){
 	  $('#progressLamp1').addClass('currentQuestion');
 	  $('#q1').show();
 	  $('#submitButton').show();
+	  $('#realworldBanner').delay(300).fadeIn(1000);
 });
 
 $(".answer").on('click', function(){
@@ -28,46 +35,62 @@ $(".answer").on('click', function(){
 	$(this).addClass('selectedAnswer');
 });
 
-//STUCK POINT 2: Now that I've set up multiple answers, how do I make this $("submitButton") function work? I think what I do is continue adding to the if statements below
+function checkAnswer(question, answer){
+	console.log("in checkAnswer");
+
+	if (question = "q1" && answer == "New York"){};
+		{
+		console.log("You're right!");
+		clearScreen();
+		$("#firstQuestion").hide();
+		$('#realworldBanner').hide();
+		$('#correct').css({'display':'inline-block'});
+		$('#progressLamp1').removeClass('currentQuestion');
+		$('#progressLamp1').addClass('rightAnswer');
+	}
+	else if (question = "q1" && answer !== "New York") {
+		console.log("you're wrong");
+		clearScreen();
+		$("#firstQuestion").hide();
+		$('#realworldBanner').hide();
+		$('#incorrect').css({'display':'inline-block'});
+		$('#progressLamp1').removeClass('currentQuestion');
+		$('#progressLamp1').addClass('wrongAnswer');
+	}
+	console.log(question + "  " + answer);
+
+};
 
 $("#submitButton").on('click', function(){
 	console.log("in submit");
 	
 	$(this).css({'background-color':'#445155'})
 
+	console.dir($('.selectedAnswer')[0]);
+
 	var questionNumber = $('.selectedAnswer')[0].parentElement.id;
-	var questionAnswer = $('.selectedAnswer')[0].outerText;
+	var questionAnswer = $('.selectedAnswer')[0].getAttribute("name");
+
 	
-	console.dir(questionNumber);
-	console.dir(questionAnswer);
+	console.log(questionNumber);
+	console.log(questionAnswer + "what?");
 	
 	var clearScreen = function () {
 		$('#topQuestion').css({'opacity':'0'});
 		$('.answers').hide();
 		$('#submitButton').hide();
 	}
-//STUCK POINT 3: Why isn't this showing up as true when the console.log is printing with these same values?
-	if (questionNumber=="q1" && questionAnswer=="NEW YORK"){
-		console.log("You're right!");
-		clearScreen();
-		$("#firstQuestion").hide();
-		$('#correct').css({'display':'inline-block'});
-		$('#progressLamp1').removeClass('currentQuestion');
-		$('#progressLamp1').addClass('rightAnswer');
-	}
-	else {
-		console.log("you're wrong");
-		clearScreen();
-		$("#firstQuestion").hide();
-		$('#incorrect').css({'display':'inline-block'});
-		$('#progressLamp1').removeClass('currentQuestion');
-		$('#progressLamp1').addClass('wrongAnswer');
-	}
+	checkAnswer(questionNumber, questionAnswer);
+//UNSTOCK = STUCK POINT 3: Why isn't this showing up as true when the console.log is printing with these same values?
+	
 });
 
-//goal is to count the number of unAnswered questions - number of elements in the unAnswered array
-//STUCK POINT 1: Can't figure out how to extract unAnswered Length
+//goal is to count the number of unAnswered questions
+//UNSTUCK - Need to put this in a function that then adjusts which question comes next (and what the progress is on the right) depending on how many answered questions there are.-  STUCK POINT 1: Can't figure out how to extract unAnswered Length
 var unAnswered = $('.unAnswered').length;
+
+console.log(unAnswered);
+
 var progressPercent = ((5 -($('.unAnswered').length))/5)*100;
 
 var progressUpdate = "% done" + "" + progressPercent;
@@ -90,6 +113,7 @@ $(".continue").click(function(){
 	 	$('#progressLamp2').addClass('currentQuestion');
 	 	$('#q2').show();
 	  	$('#submitButton').show();
+	  	$('#rhBanner').delay(300).fadeIn(1000);
 		//second question should appear & progress bar should increase by .20
 });
 
@@ -110,7 +134,7 @@ $(".continue").click(function(){
 	  	$('#submitButton').show();
 		//second question should appear & progress bar should increase by .20
 	}
-	else if (unAnswered == 2){
+	else if (unAnswered == 5){
 		$('#topQuestion').css({'opacity': '1'});
 	  	$("#topQuestion").show();
 	 	$("#thirdQuestion").show();
@@ -122,7 +146,7 @@ $(".continue").click(function(){
 
 		//third question should appear & progress bar should increase by .20
 	}
-	else if (unAnswered == 1){
+	else if (unAnswered == 10){
 		$('#topQuestion').css({'opacity': '1'});
 	  	$("#topQuestion").show();
 	 	$("#secondQuestion").show();

@@ -79,7 +79,7 @@ h3 {
 	margin-left: 135px;
 }
 
-#banner {
+.banner {
 	/*background-color: #028F76;
 	background-color: #445155;
 	/*color: #15262A;
@@ -98,8 +98,69 @@ h3 {
 	/*opacity: .75;*/
 }
 
-#banner h2 {
+.banner h1 {
+	font-size: 28px;
+}
+
+.banner h2 {
 	font-size: 24px;
+}
+
+#introBanner {
+	margin-top: -195px;
+	margin-left: 170px;
+	width: 150px;
+}
+
+#realworldBanner{
+	float: center;
+	margin-left: 40px;
+	margin-top: -175px;
+}
+
+#realworldBanner img {
+	width: 150px;
+	float: center;
+}
+
+#rhBanner {
+	float: center;
+	margin-left: 40px;
+	margin-top: -175px;
+}
+
+#rhBanner img{
+	width: 150px;
+}
+
+#bachelorBanner {
+	float: center;
+	margin-left: 40px;
+	margin-top: -175px;
+}
+
+#bachelorBanner img{
+	width: 150px;
+}
+
+#kardashiansBanner {
+	float: center;
+	margin-left: 40px;
+	margin-top: -175px;
+}
+
+#kardashiansBanner img{
+	width: 150px;
+}
+
+#survivorBanner {
+	float: center;
+	margin-left: 40px;
+	margin-top: -175px;
+}
+
+#survivorBanner img{
+	width: 150px;
 }
 
 /*only appears on home view*/
@@ -190,35 +251,33 @@ h3 {
 
 #progress {
 	position: absolute;
-	float: right;
 	display: block;
 	right: -20px;
 /*	background-color: white;
 	opacity: .1;*/
 	border-radius: 5px;
-	padding: 30px 30px 30px 10px;
-	margin-top: -500px;
+	padding: 0px 30px 30px 10px;
 	display: none;
+	top: 150px;
 }
 
 /*background should be grey when not started, orange when it's currently being done and green when completed*/
 
 .progressLight {
 	display: block;
-	width: 70px;
-	height: 70px;
+	width: 60px;
+	height: 60px;
 	/*background-color: #DA695D;*/
 	background-color: #445155;
 	/*background-color: #028F76;*/
-	-moz-border-radius: 35px;
-	-webkit-border-radius: 35px;
-	border-radius: 35px;
+	-moz-border-radius: 30px;
+	-webkit-border-radius: 30px;
+	border-radius: 30px;
 	color: white;
 	text-align: center;
 	margin: 15px;
 	text-align: baseline;
 	opacity: 1;
-	margin-right: 10px;
 
 }
 
@@ -239,7 +298,7 @@ h3 {
 }
 
 .progressLight img {
-	width: 35px;
+	width: 30px;
 	position: relative;
 	/*display: block;*/
 	padding: 10px;
