@@ -38,8 +38,7 @@ $(".answer").on('click', function(){
 function checkAnswer(question, answer){
 	console.log("in checkAnswer");
 
-	if (question = "q1" && answer == "New York"){};
-		{
+	if (question = "q1" && answer == "New York"){
 		console.log("You're right!");
 		clearScreen();
 		$("#firstQuestion").hide();
@@ -56,6 +55,15 @@ function checkAnswer(question, answer){
 		$('#incorrect').css({'display':'inline-block'});
 		$('#progressLamp1').removeClass('currentQuestion');
 		$('#progressLamp1').addClass('wrongAnswer');
+	}
+	else (question = "q2" && answer == "Beverly Hills"){
+		console.log("You're right!");
+		clearScreen();
+		$("#firstQuestion").hide();
+		$('#realworldBanner').hide();
+		$('#correct').css({'display':'inline-block'});
+		$('#progressLamp1').removeClass('currentQuestion');
+		$('#progressLamp1').addClass('rightAnswer');
 	}
 	console.log(question + "  " + answer);
 
