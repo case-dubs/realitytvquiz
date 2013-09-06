@@ -56,7 +56,7 @@ function checkAnswer(question, answer){
 		$('#progressLamp1').removeClass('currentQuestion');
 		$('#progressLamp1').addClass('wrongAnswer');
 	}
-	else (question = "q2" && answer == "Beverly Hills"){
+	else /*(question = "q2" && answer == "Beverly Hills")*/{
 		console.log("You're right!");
 		clearScreen();
 		$("#firstQuestion").hide();
