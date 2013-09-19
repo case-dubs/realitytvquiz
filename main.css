@@ -38,6 +38,7 @@ h3 {
 	margin-right: auto;
 	position: relative;
 	top: -25px;
+	padding-left: 15px;
 	border-radius: 10px;
 	background-color: #445155;
 	/*color: #D14334;*/
@@ -136,7 +137,7 @@ h3 {
 #bachelorBanner {
 	float: center;
 	margin-left: 40px;
-	margin-top: -175px;
+	margin-top: -150px;
 }
 
 #bachelorBanner img{
@@ -146,7 +147,7 @@ h3 {
 #kardashiansBanner {
 	float: center;
 	margin-left: 40px;
-	margin-top: -175px;
+	margin-top: -138px;
 }
 
 #kardashiansBanner img{
@@ -155,12 +156,12 @@ h3 {
 
 #survivorBanner {
 	float: center;
-	margin-left: 40px;
-	margin-top: -175px;
+	margin-left: 52px;
+	margin-top: -180px;
 }
 
 #survivorBanner img{
-	width: 150px;
+	width: 120px;
 }
 
 /*only appears on home view*/
@@ -184,7 +185,7 @@ h3 {
 	font-weight: thin;
 }
 
-#start {
+.button {
 	background-color: #445155;
 	font-size: 18px;
 	text-transform: uppercase;
@@ -196,6 +197,24 @@ h3 {
 	margin-left: 145px;
 	border: none;
 	width: 200px;
+}
+
+/*#start {
+	background-color: #445155;
+	font-size: 18px;
+	text-transform: uppercase;
+	color: white;
+	text-align: center;
+	padding: 15px 50px 15px 45px;
+	border-radius: 30px;
+	float: center;
+	margin-left: 145px;
+	border: none;
+	width: 200px;
+}*/
+
+#start{
+
 }
 
 #start:hover {
@@ -247,12 +266,46 @@ h3 {
 #incorrect {
 	display: none;
 }
+
+#endPage {
+	width: 95%;
+	float: center;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	color: #DA695D;
+	top: 100px;
+	height: 350px;
+	text-align: center;
+	z-index: 6;
+	display: none;
+}
+
+#endPage h2 {
+	font-size: 24px;
+	text-transform: none;
+	line-height: 1.5;
+}
+
+#retake {
+	float: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 15px;
+	background-color: #028F76;
+	padding: 15px;
+	width: 300px;
+}
+
+#retake:hover {
+	background-color: #DA695D;
+}
 /*progress section on right - hidden @ start and end */
 
 #progress {
 	position: absolute;
 	display: block;
-	right: -20px;
+	right: 0px;
 /*	background-color: white;
 	opacity: .1;*/
 	border-radius: 5px;
@@ -275,9 +328,10 @@ h3 {
 	border-radius: 30px;
 	color: white;
 	text-align: center;
-	margin: 15px;
+	margin: 15px 20px;
 	text-align: baseline;
 	opacity: 1;
+	position: relative;
 
 }
 
@@ -307,40 +361,48 @@ h3 {
 
 #progressMeter {
 	width: 100px;
-	border-radius: 10px;
+	height: 100px;
+	border-radius: 25px;
 	float: center;
-	right: 20px;
-	padding: 30px 10px;
+	right: 30px;
 	text-align: center;
-	margin-right: 20px;
-	background-color: #028F76;
+	/*margin-right: 20px;*/
+	background-color: #445155;
 	color: white;
+	position: absolute;
+	font-size: 16px;
+	text-align: baseline;
 }
 
+#progressMeter p{
+	border: 10px;
+	margin-top: 20px;
+	line-height: 1.5;
+}
 /*Section where user clicks on the answer to each question*/
 
 .answers {
-	float: left;
-	width: 75%;
+	float: center;
+	width: 95%;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 25px;
+	margin-top: 50px;
 	display: none;
-	padding-left: 100px;
+	padding-left: 375px;
 	min-width: 600px;
 }
 
 .answer {
 	display: inline-block;
-	width: 120px;
-	height: 120px;
+	width: 130px;
+	height: 130px;
 	background: #028F76;
-	-moz-border-radius: 60px;
-	-webkit-border-radius: 60px;
-	border-radius: 60px;
+	-moz-border-radius: 65px;
+	-webkit-border-radius: 65px;
+	border-radius: 65px;
 	color: white;
 	text-align: center;
-	margin: 15px;
+	margin: 10px;
 	text-align: baseline;
 }
 
@@ -359,11 +421,15 @@ h3 {
 }
 
 .answer h3 {
-	padding-top: 20px;
-	width: 80px;
+	width: 110px;
 	float: center;
 	position: relative;
 	text-align: center;
+	font-size: 16px;
+	font-weight: normal;
+	margin-top: 40px;
+	text-transform: none;
+	padding: 10px;
 	/*margin-left: 20px;*/
 }
 
@@ -375,13 +441,13 @@ h3 {
 	display: inline-block;
 	width: 120px;
 	height: 120px;
-	background: #028F76;
+	background: #445155;
 	-moz-border-radius: 60px;
 	-webkit-border-radius: 60px;
 	border-radius: 60px;
 	color: white;
 	text-align: center;
-	margin: 50px 0px 0px 780px;
+	margin: -135px 0px 0px 845px;
 	text-align: baseline;
 	position: relative;
 	/*min-width: 900px;*/
@@ -396,6 +462,6 @@ h3 {
 	width: 50px;
 	position: relative;
 	display: inline-block;
-	padding-top: -210px;
-	margin-left: -315px;
+	margin-top: 40px;
+	margin-left: 10px;
 }

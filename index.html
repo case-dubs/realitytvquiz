@@ -5,7 +5,7 @@
 		<link rel="stylesheet" type="text/css" href="main.css">
 		<title>Are You A Reality Pro?</title>
 	</head>
-	<body>
+	<body id="body">
 		<div id="logo">
 			<img src="./images/rtvLogoOrange.png">
 		</div>
@@ -17,7 +17,7 @@
 			<h1 id="fifthQuestion">Who was the winner of the first season of Survivor?</h1>
 		</div>
 		<div id="centerArea">
-			<img src="./images/tvOrange.png">
+			<img id="orangeTv" src="./images/tvOrange.png">
 			<div id="introBanner" class="banner">
 				<h3>Welcome to</h3>
 				<h2>THE REALITY TV QUIZ</h2>
@@ -38,8 +38,8 @@
 				<img src="./images/cbsLogo.png">
 			</div>
 			<div id="getStarted">
-				<h3 id="intro">How much do you know about reality TV? Take the quiz & find out</h3>
-				<input type="submit" value="Get Started" id="start">
+				<h3 id="intro">How much do you know about reality TV?<br>Take the quiz & find out</h3>
+				<input type="submit" value="Get Started" class="button" id="start">
 			</div>
 			<div class="answerPopUp" id="correct">	
 				<h1>Correct!</h1>
@@ -50,6 +50,11 @@
 				<h1>Sorry</h1>
 				<h2>Wrong Answer</h2>
 				<input type="submit" value="Continue" class="continue">
+			</div>
+			<div id="endPage">
+				<h1>Congratulations on completing the reality tv quiz!</h1>
+				<h2 id="goodbye"></h2>
+				<input onclick="reloadPage()" value="Try Again!" class="button" id="retake">
 			</div>
 		</div>
 		<div id="progress">
@@ -69,7 +74,7 @@
 				<img  src="./images/q5.png">
 			</div>
 			<div id="progressMeter">
-				% Progress
+				<p id="progressUpdate">0%<br>Complete</p>
 			</div>
 		</div>
 		<div class="answers" id="q1">
@@ -88,68 +93,68 @@
 			</div>
 		</div>
 		<div class="answers" id="q2">
-			<div class="answer">
+			<div class="answer" name="Atlanta">
 				<a href="#">
 				<h3>Atlanta</h3>
 				</a>
 			</div>
-			<div class="answer">
+			<div class="answer" name="Orange County">
 				<a href="#">
 					<h3>Orange County</h3>
 				</a>
 			</div>
-			<div class="answer">
+			<div class="answer" name="Beverly Hills">
 				<a href="#">
 					<h3>Beverly Hills</h3>
 				</a>
 			</div>
 		</div>
 		<div class="answers" id="q3">
-			<div class="answer">
+			<div class="answer" name="3">
 				<a href="#">
 				<h3>3</h3>
 				</a>
 			</div>
-			<div class="answer">
+			<div class="answer" name="5">
 				<a href="#">
 					<h3>5</h3>
 				</a>
 			</div>
-			<div class="answer">
+			<div class="answer" name="10">
 				<a href="#">
 					<h3>10</h3>
 				</a>
 			</div>
 		</div>
 		<div class="answers" id="q4">
-			<div class="answer">
+			<div class="answer" name="Apple">
 				<a href="#">
 				<h3>Apple</h3>
 				</a>
 			</div>
-			<div class="answer">
+			<div class="answer" name="North">
 				<a href="#">
 					<h3>North</h3>
 				</a>
 			</div>
-			<div class="answer">
+			<div class="answer" name="Blue">
 				<a href="#">
 					<h3>Blue</h3>
 				</a>
 			</div>
 		</div>
 		<div class="answers" id="q5">
-			<div class="answer">
+			<div class="answer" name="Richard">
 				<a href="#">
 				<h3>Richard</h3>
 				</a>
 			</div>
-			<div class="answer">
+			<div class="answer" name="John">
 				<a href="#">
 					<h3>John</h3>
 				</a>
 			</div>
-			<div class="answer">
+			<div class="answer" name="Rebecca">
 				<a href="#">
 					<h3>Rebecca</h3>
 				</a>
