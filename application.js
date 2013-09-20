@@ -4,7 +4,7 @@ $('#introBanner').delay(500).fadeIn(1000);
 
 //When "Get Started" button is clicked, Banner and getStarted sections fade away & the first question, q1 answers and progress bar (on right) fade in
 
-$('#start').on('click', function(){
+$('#start').on('click keypress keyup', function(){
 	  console.log( "start button functions");
 	 // var getStarted = $('#getStarted');
 	  //var banner = $('#banner');
@@ -12,6 +12,19 @@ $('#start').on('click', function(){
 	  $('#introBanner').hide();
 	 q1Appear();
 	  
+});
+
+//TO DO 1: Not working! - If user clicks return on landing page, start button will be triggered
+
+$('#start').keydown(function(){
+	 // var getStarted = $('#getStarted');
+	  //var banner = $('#banner');
+	  if (event.which == 13){
+	  console.log( "keypress button functions");
+	  $('#getStarted').hide();
+	  $('#introBanner').hide();
+	 q1Appear();
+	  }
 });
 
 //When user clicks on an answer, ".selectedAnswer" class is added to that answer. If the user changes the answer they've selected (before submiting), the class is removed from the previous answer and added to the newly selected answre
@@ -28,6 +41,7 @@ function clearScreen() {
 		$('#topQuestion').css({'opacity':'0'});
 		$('.answers').hide();
 		$('#submitButton').hide();
+		$('#progress').hide();
 	};
 
 function q1Appear(){
@@ -236,7 +250,7 @@ $(".continue").click(function(){
 	$('#correct').css({'display':'none'});
 
 	var progressPercent = ((5 -($('.unAnswered').length))/5)*100;
-	var progressUpdate = progressPercent + "% Complete";
+	var progressUpdate = "<br>" + progressPercent + "% Complete";
 	var goodbyeMessage = "You got " + (5 - $('.wrongAnswer').length) + " out of 5 questions right.<br>To retake the quiz, just click below."
 
 	$('#progressUpdate').empty().append(progressUpdate);

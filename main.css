@@ -3,7 +3,8 @@
 body {
 	background-color: #15262A;
 	font-family: Arial;
-	min-width: 950px;
+	width: 1300px;
+	height: 700px;
 }
 
 h2 {
@@ -68,6 +69,7 @@ h3 {
 	margin-right: auto;
 	margin-top: 25px;
 	z-index: 1;
+	/*min-width: 1040px;*/
 }
 
 #centerArea img {
@@ -260,10 +262,12 @@ h3 {
 }
 
 #correct {
+	display: inline-block;
 	display: none;
 }
 
 #incorrect {
+	display: inline-block;
 	display: none;
 }
 
@@ -303,15 +307,16 @@ h3 {
 /*progress section on right - hidden @ start and end */
 
 #progress {
-	position: absolute;
-	display: block;
+	position: relative;
+	display: inline-block;
 	right: 0px;
 /*	background-color: white;
 	opacity: .1;*/
 	border-radius: 5px;
-	padding: 0px 30px 30px 10px;
+	padding: 0px 30px 30px 0px;
 	display: none;
-	top: 150px;
+	float: right;
+	top: -320px;
 }
 
 /*background should be grey when not started, orange when it's currently being done and green when completed*/
@@ -364,12 +369,11 @@ h3 {
 	height: 100px;
 	border-radius: 25px;
 	float: center;
-	right: 30px;
 	text-align: center;
 	/*margin-right: 20px;*/
 	background-color: #445155;
 	color: white;
-	position: absolute;
+	position: relative;
 	font-size: 16px;
 	text-align: baseline;
 }
@@ -383,13 +387,14 @@ h3 {
 
 .answers {
 	float: center;
-	width: 95%;
+	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 50px;
 	display: none;
-	padding-left: 375px;
-	min-width: 600px;
+	padding-left: 360px;
+	padding-right: 150px;
+	min-width: 1040px;
 }
 
 .answer {
@@ -447,7 +452,7 @@ h3 {
 	border-radius: 60px;
 	color: white;
 	text-align: center;
-	margin: -135px 0px 0px 845px;
+	margin: -135px 0px 0px 835px;
 	text-align: baseline;
 	position: relative;
 	/*min-width: 900px;*/
