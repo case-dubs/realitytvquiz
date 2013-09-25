@@ -4,7 +4,7 @@ $('#introBanner').delay(500).fadeIn(1000);
 
 //When "Get Started" button is clicked, Banner and getStarted sections fade away & the first question, q1 answers and progress bar (on right) fade in
 
-$('#start').on('click keypress keyup', function(){
+$('#start').on('click', function(){
 	  console.log( "start button functions");
 	 // var getStarted = $('#getStarted');
 	  //var banner = $('#banner');
@@ -42,6 +42,7 @@ function clearScreen() {
 		$('.answers').hide();
 		$('#submitButton').hide();
 		$('#progress').hide();
+		$('#orangeTv').hide();
 	};
 
 function q1Appear(){
@@ -53,6 +54,7 @@ function q1Appear(){
 	  $('#progressLamp1').addClass('currentQuestion');
 	  $('#q1').show();
 	  $('#submitButton').show();
+	  $('#orangeTv').show();
 	  $('#realworldBanner').delay(300).fadeIn(1000);
 };
 
@@ -73,6 +75,7 @@ function q2Appear(){
 	 	$('#progressLamp2').addClass('currentQuestion');
 	 	$('#q2').show();
 	  	$('#submitButton').show();
+	  	$('#orangeTv').show();
 	  	$('#rhBanner').delay(300).fadeIn(1000);
 };
 
@@ -96,6 +99,7 @@ function q3Appear(){
 	 	$('#progressLamp3').addClass('currentQuestion');
 	 	$('#q3').show();
 	  	$('#submitButton').show();
+	  	$('#orangeTv').show();
 	  	$('#bachelorBanner').delay(300).fadeIn(1000);
 };
 
@@ -116,6 +120,7 @@ function q4Appear(){
 	 	$('#progressLamp4').addClass('currentQuestion');
 	 	$('#q4').show();
 	  	$('#submitButton').show();
+	  	$('#orangeTv').show();
 	  	$('#kardashiansBanner').delay(300).fadeIn(1000);
 };
 
@@ -136,6 +141,7 @@ function q5Appear(){
 	 	$('#progressLamp5').addClass('currentQuestion');
 	 	$('#q5').show();
 	  	$('#submitButton').show();
+	  	$('#orangeTv').show();
 	  	$('#survivorBanner').delay(300).fadeIn(1000);
 };
 
